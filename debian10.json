@@ -106,5 +106,12 @@
       "execute_command": "echo 'packer' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": ["scripts/cleanup.sh"]
     }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "keep_input_artifact": true,
+      "output": "{{.Provider}}_debian-10.11.box"
+    }
   ]
 }
