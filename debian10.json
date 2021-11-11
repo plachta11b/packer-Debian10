@@ -90,7 +90,7 @@
   "provisioners": [
     {
       "type": "shell",
-      "execute_command": "echo 'packer'|{{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "execute_command": "echo 'packer' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "inline": [
         "apt -y update && apt -y upgrade",
         "apt -y install python3-pip",
@@ -103,7 +103,7 @@
     },
     {
       "type": "shell",
-      "execute_command": "echo 'packer'|{{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "execute_command": "echo 'packer' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": ["scripts/cleanup.sh"]
     }
   ]
