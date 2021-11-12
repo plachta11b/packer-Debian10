@@ -111,7 +111,7 @@
     {
       "type": "vagrant",
       "keep_input_artifact": true,
-      "output": "{{.Provider}}_debian-10.11.box"
+      "output": "{{.Provider}}_{{ user `vm_name` }}.box"
     }
   ]
 }
